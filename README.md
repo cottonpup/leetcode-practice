@@ -1,2 +1,4 @@
-# leetcode-practice
-# leetcode-practice
+# Easy Leetcode Problem Lists
+
+1. Two Sum
+
