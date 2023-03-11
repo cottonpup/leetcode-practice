@@ -13,7 +13,7 @@ const isPalindromeNaive = function (x) {
     return frontDigits === backDigits.split('').reverse().join('');
 };
 
-// By converting the value of x to a string, splitting the resulting string in half,
+// By converting the value of `x` to a string, splitting the resulting string in half,
 // reversing the second half, and comparing it to the first half, I was able to solve the problem.
 // I also realized I don't really need to split them in half. I could just reverse it right away and return if it is equal.
 // While I know that this way may not be the most efficient,
@@ -21,11 +21,14 @@ const isPalindromeNaive = function (x) {
 
 // 2. The Optimized Solution
 
-const isPalindromeOptimized = function (x) {
+const isPalindrome = function (x) {
     let reversed = '';
 
-    for (let char of x) {
+    for (let char of x.toString()) {
         reversed = char + reversed;
     }
-    return reversed;
+    return Number(reversed) === x;
 };
+
+// Iterating through the x value, I can save each letter in reverse order one by one to the reversed value.
+// Then, I can check if the reversed value is equal to the x value, and return the result.
